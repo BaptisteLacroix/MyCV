@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&display=swap');
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121214;
+    padding: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-attachment: fixed;
+    background-image: url("../img/intro.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+}
+
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+#boutonPlus {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 0.5em 0.5em 3em;
+    border-radius: 60px;
+}
+
+#boutonPlus::before {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 0.8em;
+    left: 1em;
+    content: "";
+    margin-left: auto;
+    margin-right: auto;
+    width: 0.7em;
+    height: 0.7em;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    color: white;
+    transform: rotate(-135deg);
+    transition: 1s;
+}
+
+#boutonPlus span {
+    z-index: -1;
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    left: 0.8em;
+    border-radius: 50px;
+    background-color: #3e3e3edb;
+    transition: 1s;
+}
+
+#boutonPlus:hover span {
+    width: 90%;
+}
+
+
+#boutonPlus:hover::before {
+    transform: translateX(0.6em);
+}
+
+
+li#citation_accueil {
+    font-size: 1.5em;
+    width: 85%;
+    font-style: italic;
+    margin-bottom: 5%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2 {
+    color: orange;
+}
+
+/* main */
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@media screen and (min-width: 1000px) {
+
+    nav {
+        display: flex;
+    }
+
+    /* Menu */
+    div.bandeau {
+        flex: 0.2;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        max-width: 100%;
+        height: 100vh;
+        background-color: #0a0903;
+        font-size: 30px;
+    }
+
+    div.nav-left {
+        width: 300px;
+        text-align: right;
+        transition: opacity 1s ease;
+    }
+
+    div.nav-left > ol > li {
+        margin: 5%;
+    }
+
+    div.nav-left > ol > li > a {
+        transition: color 0.2s ease;
+        color: rgba(255, 255, 255, 0.7);
+        display: block;
+        font-size: 0.6em;
+        font-weight: bold;
+        letter-spacing: 0.25em;
+        padding: 1.35em 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    div.nav-left > ol > li > a:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    div.nav-left > ol > li > a::before,
+    div.nav-left > ol > li > a::after {
+        width: 100%;
+        border-radius: 0.2em;
+        bottom: 0;
+        content: '';
+        height: 0.2em;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        animation-duration: 3s;
+        animation-name: animatedBar;
+        transition: 1s;
+    }
+
+    div.nav-left > ol > li > a:hover::before,
+    div.nav-left > ol > li > a:hover::after {
+        background-color: orange;
+    }
+
+    div.nav-left > ol > li > a:hover,
+    div.nav-left > ol > li > a:hover {
+        color: #FFA500;
+    }
+
+    div.nav-right {
+        flex: 0.8;
+        justify-content: center;
+        align-self: center;
+    }
+
+    div.nav-right {
+        animation-duration: 3s;
+        animation-name: animatedText;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+    div.nav-left > ol > li > a {
+        transition: color 0.2s ease;
+        color: rgba(255, 255, 255, 0.7);
+        display: block;
+        font-size: 0.6em;
+        font-weight: bold;
+        letter-spacing: 0.25em;
+        padding: 1.35em 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    div.nav-left > ol > li:first-of-type > a {
+        transition: color 0.2s ease;
+        color: orange;
+        display: block;
+        font-size: 0.6em;
+        font-weight: bold;
+        letter-spacing: 0.25em;
+        padding: 1.35em 0;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    div.nav-left > ol > li > a:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    div.nav-left > ol > li:first-of-type > a::before,
+    div.nav-left > ol > li:first-of-type > a::after {
+        width: 100%;
+        border-radius: 0.2em;
+        bottom: 0;
+        content: '';
+        height: 0.2em;
+        position: absolute;
+        right: 0;
+        background-color: orange;
+        animation-duration: 3s;
+        animation-name: animatedBar;
+        transition: 1s;
+    }
+
+    div.nav-left > ol > li > a::before,
+    div.nav-left > ol > li > a::after {
+        width: 100%;
+        border-radius: 0.2em;
+        bottom: 0;
+        content: '';
+        height: 0.2em;
+        position: absolute;
+        right: 0;
+        background-color: white;
+        animation-duration: 3s;
+        animation-name: animatedBar;
+        transition: 1s;
+    }
+
+    div.nav-left > ol > li > a:hover::before,
+    div.nav-left > ol > li > a:hover::after {
+        background-color: orange;
+    }
+
+    div.nav-left > ol > li > a:hover,
+    div.nav-left > ol > li > a:hover {
+        color: #FFA500;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    div.nav-right > ul > li > h2 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bolder;
+    }
+
+    div.nav-right > ul li {
+        text-align: center;
+        margin-top: 5%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    li#citation_accueil {
+        font-size: 1em;
+    }
+
+    #auteur {
+        font-size: 0.6em;
+    }
+}
+
+/* hyperliens */
+
+a:hover {
+    color: black;
+}
+
+/* Citation */
+
+cite > a {
+    color: black;
+    text-decoration: none;
+}
+
+
+@keyframes animatedBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes animatedText {
+    from {
+        opacity: 0;
+        margin-top: 10%;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce4 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(0) rotate(-135deg);
+    }
+    40% {
+        transform: translateX(13px) rotate(-135deg);
+    }
+    60% {
+        transform: translateX(7px) rotate(-135deg);
+    }
+}
