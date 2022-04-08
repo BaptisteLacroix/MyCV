@@ -11,7 +11,13 @@ a:hover {
     color: #f7f5f8;
 }
 
-/* Top */
+.wrapper.fullscreen {
+    min-height: 100vh;
+}
+
+/*************************************/
+/*               Top                 */
+/*************************************/
 
 .type2 {
     background-color: #202124;
@@ -40,16 +46,125 @@ a:hover {
     align-items: center;
 }
 
-/* Middle */
+/****************************************/
+/*               Middle                 */
+/****************************************/
 
 .type3 {
+    height: auto;
     background-color: #121214;
 }
 
+.categorie {
+    display: flex;
+    justify-content: center
+}
 
-/* Bottom */
+.categorie > ul {
+    padding: 0;
+}
+
+.categorie > ul li {
+    display: inline-block;
+    margin: 50px;
+}
+
+.categorie.cat1 > ul li {
+    display: inline-block;
+    margin: 0 50px 50px;
+}
+
+/* Games */
+
+#guitarHero {
+    border-radius: 500px;
+    width: 200px;
+    height: auto;
+    transition: 1s;
+}
+
+#labyrinth {
+    border-radius: 500px;
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
+#spaceShooter {
+    border-radius: 500px;
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
+#guitarHero:hover, #labyrinth:hover, #spaceShooter:hover {
+    border-radius: 0;
+    transform: scale(1.5);
+}
+
+/* WebSite */
+
+#S105, #S106 {
+    border-radius: 500px;
+    width: 300px;
+    height: auto;
+    transition: 1s;
+}
+
+#myCV {
+    border-radius: 500px;
+    width: 300px;
+    height: auto;
+    transition: 1s;
+}
+
+#S105:hover, #S106:hover, #myCV:hover {
+    border-radius: 0;
+    transform: scale(1.5);
+}
+
+/* languages */
+
+#python {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#java {
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
+#lua {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#html-css {
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
+#C {
+    width: 90px;
+    height: auto;
+    transition: 1s;
+}
+
+#python:hover, #java:hover, #lua:hover, #html-css:hover, #C:hover {
+    transform: scale(1.5);
+}
+
+/****************************************/
+/*               Bottom                 */
+/****************************************/
 
 .type4 {
+    height: auto;
     background-color: #202124;
 }
 
@@ -79,6 +194,10 @@ a:hover {
 
 /* Form */
 
+ul#info {
+    padding-left: 50px;
+}
+
 .inner {
     transform: translateY(0);
     transition: opacity 1s ease, transform 1s ease;
@@ -99,6 +218,7 @@ a:hover {
 .split {
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .split > :nth-child(2) {
@@ -163,6 +283,27 @@ form > .field2 > .field {
     width: calc(100% - 1.5em);
 }
 
+/* icons */
+
+ul.icons {
+    padding: 0;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 0.75em 0 0;
+}
+
+#logoInsta {
+    width: 32px;
+    height: 32px;
+}
+
+#logoTwitter {
+    width: 32px;
+    height: 32px;
+}
+
 /* Bouton */
 
 button {
@@ -212,6 +353,8 @@ button {
     position: absolute;
     width: 2em;
     height: 2em;
+    left: 50px;
+    top: -5px;
     border-radius: 50px;
     background-color: #3e3e3edb;
     transition: 1s;
