@@ -20,11 +20,9 @@ body {
     background-position: top right;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    overflow-x: hidden;
 }
 
 .fullscreen {
-    width: 100vw;
     height: 100vh;
 }
 
