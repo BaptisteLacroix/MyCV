@@ -397,7 +397,7 @@ footer {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
 
     label {
         color: #ffffff;
@@ -409,7 +409,7 @@ footer {
         font-size: 1.1em;
     }
 
-    #info {
+    ul#info {
         padding: 0;
     }
 
@@ -417,13 +417,13 @@ footer {
         display: block;
         flex-wrap: wrap;
         width: calc(100% + 3em);
-        margin: -1.5em 0 2em -1.5em;
+        margin: 0 0 2em 0;
     }
 
     form > .fields > .field {
         flex-grow: 0;
         flex-shrink: 0;
-        padding: 10px 0 0;
+        padding: 0;
         width: calc(100% - 1.5em);
     }
 
