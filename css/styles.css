@@ -18,6 +18,12 @@ a:hover {
 
 .type2 {
     background-color: #202124;
+    height: auto;
+}
+
+#aboutme {
+    margin: 20px;
+    padding: 20px;
 }
 
 /****************************************/
