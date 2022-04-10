@@ -11,15 +11,13 @@ a:hover {
     color: #f7f5f8;
 }
 
-
-
 .hide {
     opacity: 0;
     transition: 1s;
 }
 
 .hide.active {
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-name: animatedSection;
     opacity: 1;
 }
@@ -52,6 +50,9 @@ a:hover {
 /****************************************/
 /*               Middle                 */
 /****************************************/
+
+
+
 
 .type3 {
     height: auto;
@@ -424,6 +425,25 @@ footer {
         margin-top: 30px;
     }
 
+    #dq {
+        padding-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    form > .fields{
+        margin-left: 5px;
+    }
+
+    .field2 {
+        display: flex;
+        margin-left: 35px;
+    }
+
+    #dq {
+        padding-left: 20px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -460,6 +480,11 @@ footer {
         display: block;
         flex-direction: column;
         padding: 0;
+    }
+
+    .field2 {
+        display: flex;
+        margin-left: 0;
     }
 }
 

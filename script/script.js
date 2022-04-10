@@ -1,8 +1,9 @@
 const SELECTOR = '.hide';
 const ANIMATE_CLASS_NAME = 'active';
+let flag = true;
 
 const animate = element => (
-    element.classList.add(ANIMATE_CLASS_NAME) // On a joute a la classe .hide la classe .active
+    element.classList.add(ANIMATE_CLASS_NAME) // On a joute a la classe .hide la classe .active => 'hide active'
 );
 
 const isAnimated = element => (
@@ -31,3 +32,17 @@ const elements = [].filter.call(
 
 // start observing your elements
 elements.forEach((element) => intersectionObserver.observe(element));
+
+
+function changeTheme() {
+    if (flag) {
+        document.getElementById("theme").style.backgroundColor = "grey";
+        document.getElementById("theme").style.color = "white";
+        flag = !flag
+    } else {
+        document.getElementById("theme").style.backgroundColor = "grey";
+        document.getElementById("theme").style.color = "white";
+        flag = !flag
+    }
+
+}
