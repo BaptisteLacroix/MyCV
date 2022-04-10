@@ -35,13 +35,13 @@ elements.forEach((element) => intersectionObserver.observe(element));
 
 function changeTheme(color) {
     if (color === 'dark')
-        document.getElementById('theme_css').href = './css/themeDark.css';
+        document.getElementById('theme_css').href = './css/color/themeDark.css';
     else if (color === 'blue')
-        document.getElementById('theme_css').href = './css/themeBlue.css';
+        document.getElementById('theme_css').href = './css/color/themeBlue.css';
     else if (color === 'beige')
-        document.getElementById('theme_css').href = './css/themeBeige.css';
+        document.getElementById('theme_css').href = './css/color/themeBeige.css';
     else if (color === 'purple')
-        document.getElementById('theme_css').href = './css/themePurple.css';
+        document.getElementById('theme_css').href = './css/color/themePurple.css';
 }
 
 function onHover(id, path)

@@ -1,0 +1,76 @@
+body {
+    background-color: cadetblue;
+    color: white;
+}
+
+div.bandeau {
+    background-color: darkslategrey;
+}
+
+#infobulle {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.type2 {
+    background-color: darkcyan;
+}
+
+.type3 {
+    background-color: darkslategray;
+}
+
+.type4 {
+    background-color: darkcyan;
+}
+
+label {
+    color: white;
+}
+
+input[type=text], input[type=email] {
+    background: rgba(255, 255, 255, 0.05);
+    border: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: solid 1px rgba(255, 255, 255, 0.15);
+}
+
+#formButton {
+    color: white;
+}
+
+#formButton::before {
+    background-color: white;
+}
+
+#formButton:hover {
+    color: black;
+}
+
+.bandeauColor {
+    color: white;
+}
+
+.bandeauColor::before, .bandeauColor::after {
+    background-color: white;
+}
+
+@media screen and (max-width: 999px) {
+    li:first-of-type > .bandeauColor {
+        color: orange;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    #borderStyle {
+        border-left: solid white;
+    }
+}
+
+@media screen and (max-width: 1029px) {
+    #borderStyle {
+        border-top: solid white;
+    }
+}
