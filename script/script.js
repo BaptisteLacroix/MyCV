@@ -33,7 +33,7 @@ const elements = [].filter.call(
 // start observing your elements
 elements.forEach((element) => intersectionObserver.observe(element));
 
-
+/*
 function changeTheme() {
     if (flag) {
         document.getElementById("theme").style.backgroundColor = "grey";
@@ -44,5 +44,14 @@ function changeTheme() {
         document.getElementById("theme").style.color = "white";
         flag = !flag
     }
+}
+*/
+function onHover(id, path)
+{
+    document.getElementById(id).src = path;
+}
 
+function offHover(id, path)
+{
+    document.getElementById(id).src = path;
 }
