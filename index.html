@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Baptiste Lacroix">
-    <link rel="stylesheet" type="text/css" href="css/accueil.css"/>
-    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/accueil.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/themeDark.css" id="theme_css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Accueil</title>
 </head>
@@ -15,19 +16,36 @@
 <section class="type1 fullscreen" id="Home">
     <nav>
         <div class="bandeau">
+            <div id="printTheme">
+                <p>Choose your theme</p>
+            </div>
+            <ul id="colorChange">
+                <li>
+                    <button class="dot dot1" onclick="changeTheme('dark')"></button>
+                </li>
+                <li>
+                    <button class="dot dot2" onclick="changeTheme('blue')"></button>
+                </li>
+                <li>
+                    <button class="dot dot3" onclick="changeTheme('beige')"></button>
+                </li>
+                <li>
+                    <button class="dot dot4" onclick="changeTheme('purple')"></button>
+                </li>
+            </ul>
             <div class="nav-left">
                 <ol>
                     <li>
-                        <a href="./index.html">MENU</a>
+                        <a class="bandeauColor" href="./index.html">MENU</a>
                     </li>
                     <li>
-                        <a href="./index.html#About">About Me</a>
+                        <a class="bandeauColor" href="./index.html#About">About Me</a>
                     </li>
                     <li>
-                        <a href="./index.html#Work">Work</a>
+                        <a class="bandeauColor" href="./index.html#Work">Work</a>
                     </li>
                     <li>
-                        <a href="./index.html#Contact">Contact</a>
+                        <a class="bandeauColor" href="./index.html#Contact">Contact</a>
                     </li>
                 </ol>
             </div>
@@ -207,11 +225,11 @@
                             </div>
                         </div>
                         <div class="field2">
-                            <button type="submit">Send</button>
+                            <button id="formButton" type="submit">Send</button>
                         </div>
                     </form>
                 </li>
-                <li>
+                <li id="borderStyle">
                     <ul id="info">
                         <li>
                             <h3>Email</h3>

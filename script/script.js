@@ -1,6 +1,5 @@
 const SELECTOR = '.hide';
 const ANIMATE_CLASS_NAME = 'active';
-let flag = true;
 
 const animate = element => (
     element.classList.add(ANIMATE_CLASS_NAME) // On a joute a la classe .hide la classe .active => 'hide active'
@@ -33,19 +32,18 @@ const elements = [].filter.call(
 // start observing your elements
 elements.forEach((element) => intersectionObserver.observe(element));
 
-/*
-function changeTheme() {
-    if (flag) {
-        document.getElementById("theme").style.backgroundColor = "grey";
-        document.getElementById("theme").style.color = "white";
-        flag = !flag
-    } else {
-        document.getElementById("theme").style.backgroundColor = "grey";
-        document.getElementById("theme").style.color = "white";
-        flag = !flag
-    }
+
+function changeTheme(color) {
+    if (color === 'dark')
+        document.getElementById('theme_css').href = './css/themeDark.css';
+    else if (color === 'blue')
+        document.getElementById('theme_css').href = './css/themeBlue.css';
+    else if (color === 'beige')
+        document.getElementById('theme_css').href = './css/themeBeige.css';
+    else if (color === 'purple')
+        document.getElementById('theme_css').href = './css/themePurple.css';
 }
-*/
+
 function onHover(id, path)
 {
     document.getElementById(id).src = path;
