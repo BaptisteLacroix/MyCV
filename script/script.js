@@ -44,12 +44,14 @@ function changeTheme(color) {
         document.getElementById('theme_css').href = './css/color/themePurple.css';
 }
 
-function onHover(id, path)
-{
+function onHover(id, path) {
     document.getElementById(id).src = path;
 }
 
-function offHover(id, path)
-{
+function offHover(id, path) {
     document.getElementById(id).src = path;
+}
+
+function copyContent() {
+    navigator.clipboard.writeText("YuanMeng#3647");
 }
