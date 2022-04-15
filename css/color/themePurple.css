@@ -1,0 +1,105 @@
+a, i, p, b {
+    color: white;
+}
+
+div.bandeau {
+    background-color: #312450;
+}
+
+.bandeauColor {
+    color: white;
+}
+
+.bandeauColor::before, .bandeauColor::after {
+    background-color: black;
+}
+
+#boutonPlus {
+    color: white;
+}
+
+body {
+    background-color: #5e42a6;
+    color: white;
+}
+
+#infobulle {
+    background-color: rgb(0 0 0 / 15%);
+}
+
+.type2 {
+    background-color: darkslateblue;
+}
+
+.type3 {
+    background-color: mediumpurple;
+}
+
+.type4 {
+    background-color: #5e42a6;
+}
+
+label {
+    color: white;
+}
+
+.categorie > section {
+    border: solid 1px rgb(0 0 0 / 15%);
+    background: rgb(0 0 0 / 5%);
+}
+
+.categorie > section > section {
+    border-right: solid 1px rgb(0 0 0 / 15%);
+}
+
+input[type=text], input[type=email] {
+    background: rgb(0 0 0 / 5%);
+    border: solid 1px rgb(0 0 0 / 15%);
+}
+
+textarea {
+    background: rgb(0 0 0 / 5%);
+    border: solid 1px rgb(0 0 0 / 15%);
+}
+
+#formButton {
+    color: white;
+}
+
+#formButton::before {
+    background-color: white;
+}
+
+#formButton:hover {
+    color: black;
+}
+
+.bandeauColor {
+    color: white;
+}
+
+.bandeauColor::before, .bandeauColor::after {
+    background-color: white;
+}
+
+footer {
+    background-color: #493382;
+}
+
+@media screen and (max-width: 999px) {
+    li:first-of-type > .bandeauColor {
+        color: orange;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    #borderStyle {
+        border-left: solid white;
+    }
+}
+
+@media screen and (max-width: 1029px) {
+    #borderStyle {
+        border-top: solid white;
+    }
+}
