@@ -54,5 +54,5 @@ function offHover(id, path) {
 
 function copyContent() {
     navigator.clipboard.writeText("YuanMeng#3647");
-    alert("Content copy to your clipboard")
+    alert("Id copy to your clipboard")
 }
