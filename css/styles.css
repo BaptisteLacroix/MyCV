@@ -495,6 +495,10 @@ footer {
         flex: 0.5;
         border-left: solid white;
     }
+
+    .categorie:hover > #infobulle {
+        display: block;
+    }
 }
 
 
