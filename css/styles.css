@@ -209,6 +209,12 @@ a:hover {
     transition: 1s;
 }
 
+#javascript {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
 /*
 #python:hover, #java:hover, #lua:hover, #html-css:hover, #C:hover {
     transform: scale(1.5);
@@ -434,6 +440,27 @@ footer {
 
 /* Responsive */
 
+@media screen and (max-width: 1250px) {
+
+    .categorie {
+        justify-content: space-evenly;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .categorie > div {
+        flex-direction: column;
+    }
+
+    .categorie > div > div {
+        border: none;
+    }
+
+    .box > div {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
 
 @media screen and (min-width: 1030px) {
 
@@ -446,6 +473,12 @@ footer {
     #borderStyle {
         flex: 0.5;
         border-left: solid white;
+    }
+
+    #infobulle {
+        padding: 20px;
+        top: -70px;
+        bottom: auto;
     }
 
     .categorie:hover > #infobulle {
@@ -538,6 +571,26 @@ footer {
 
 @media screen and (max-width: 500px) {
 
+    .categorie {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .categorie > div {
+        flex-direction: column;
+    }
+
+    .categorie > div > div {
+        border: none;
+    }
+
+    .box > div {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
     label {
         max-width: 100%;
         font-weight: bold;
@@ -576,7 +629,6 @@ footer {
         margin-left: 0;
     }
 }
-
 
 @media screen and (max-width: 450px) {
 
