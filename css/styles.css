@@ -11,59 +11,11 @@ a:hover {
     color: #f7f5f8;
 }
 
-.bandeau > #theme {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
 /*
 .mandatory-scroll-snapping {
     scroll-snap-align: start;
 }
 */
-
-#colorChange {
-    padding: 0;
-    margin-top: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-#printTheme {
-    display: flex;
-    justify-content: center;
-}
-
-#printTheme > p {
-    color: orange;
-}
-
-.dot {
-    height: 20px;
-    width: 10px;
-    border-radius: 50%;
-    border: solid 1px white;
-    display: inline-block;
-    cursor: pointer;
-    margin: 10px;
-}
-
-.dot.dot1 {
-    background-color: black;
-}
-
-.dot.dot2 {
-    background-color: cadetblue;
-}
-
-.dot.dot3 {
-    background-color: bisque;
-}
-
-.dot.dot4 {
-    background-color: #493382;
-}
-
 
 .hide {
     opacity: 0;
