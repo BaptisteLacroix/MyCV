@@ -1,6 +1,8 @@
 const SELECTOR = '.hide';
 const ANIMATE_CLASS_NAME = 'active';
 
+const countEl = document.getElementById('count');
+
 const animate = element => (
     element.classList.add(ANIMATE_CLASS_NAME) // On a joute a la classe .hide la classe .active => 'hide active'
 );
@@ -55,4 +57,14 @@ function offHover(id, path) {
 function copyContent() {
     navigator.clipboard.writeText("YuanMeng#3647");
     alert("Id copy to your clipboard")
+}
+
+updateVisitCount();
+
+function updateVisitCount() {
+    fetch('https://api.countapi.xyz/update/lacroix.gq/viewers/?amount=1')
+        .then(res => res.json())
+        .then(res => {
+            countEl.innerHTML = res.value;
+        })
 }
