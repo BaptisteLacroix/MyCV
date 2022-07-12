@@ -151,7 +151,14 @@ a:hover {
     transition: 1s;
 }
 
-#guitarHero:hover, #labyrinth:hover, #spaceShooter:hover {
+#chessGame {
+    border-radius: 500px;
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
+#guitarHero:hover, #labyrinth:hover, #spaceShooter:hover, #chessGame:hover {
     border-radius: 0;
     transform: scale(1.3);
 }
