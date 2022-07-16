@@ -123,10 +123,6 @@ a:hover {
     margin: 0 50px 50px;
 }
 
-.categorie#languages {
-    margin-bottom: 100px;
-}
-
 
 /* Games */
 
@@ -222,11 +218,94 @@ a:hover {
     transition: 1s;
 }
 
-/*
-#python:hover, #java:hover, #lua:hover, #html-css:hover, #C:hover {
-    transform: scale(1.5);
+/* Operating systems */
+
+#windows {
+    width: 100px;
+    height: auto;
+    transition: 1s;
 }
-*/
+
+#ubuntu {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#kalilinux {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#android {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#debian {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+/* Tools */
+
+#github {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#git {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#jetbrain {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#vs {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#vscode {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#sublime-text {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#oracledb {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#msoffice {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+#eclipse {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
 
 label {
     font-weight: bold;
@@ -331,9 +410,11 @@ ul.icons li {
     height: 32px;
 }
 
-#logoTwitter {
+#logoLinkedin {
     width: 32px;
     height: 32px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #logoDiscord {
