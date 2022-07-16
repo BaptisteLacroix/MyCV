@@ -62,7 +62,7 @@ function copyContent() {
 updateVisitCount();
 
 function updateVisitCount() {
-    fetch('https://api.countapi.xyz/update/lacroix.gq/viewers/?amount=1')
+    fetch('https://api.countapi.xyz/hit/lacroix.gq')
         .then(res => res.json())
         .then(res => {
             countEl.innerHTML = res.value;
