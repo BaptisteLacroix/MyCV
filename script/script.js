@@ -2,6 +2,8 @@ const SELECTOR = '.hide';
 const ANIMATE_CLASS_NAME = 'active';
 
 const countEl = document.getElementById('count');
+const d = new Date();
+document.getElementById("age").innerHTML = (d.getFullYear() - 2003);
 
 const animate = element => (
     element.classList.add(ANIMATE_CLASS_NAME) // On a joute a la classe .hide la classe .active => 'hide active'
