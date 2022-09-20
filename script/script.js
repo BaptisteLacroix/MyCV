@@ -1,40 +1,17 @@
-const SELECTOR = '.hide';
-const ANIMATE_CLASS_NAME = 'active';
-
 const countEl = document.getElementById('count');
-const d = new Date();
-document.getElementById("age").innerHTML = (d.getFullYear() - 2003);
 
-const animate = element => (
-    element.classList.add(ANIMATE_CLASS_NAME) // On a joute a la classe .hide la classe .active => 'hide active'
-);
+setAge();
 
-const isAnimated = element => (
-    element.classList.contains(ANIMATE_CLASS_NAME)
-);
+updateVisitCount();
 
-const intersectionObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-
-        // when element's is in viewport,
-        // animate it!
-        if (entry.intersectionRatio > 0) {
-            animate(entry.target);
-            // remove observer after animation
-            observer.unobserve(entry.target);
-        }
-    });
-});
-
-// get only these elements,
-// which are not animated yet
-const elements = [].filter.call(
-    document.querySelectorAll(SELECTOR),
-    element => !isAnimated(element, ANIMATE_CLASS_NAME)
-);
-
-// start observing your elements
-elements.forEach((element) => intersectionObserver.observe(element));
+function setAge() {
+    let d = new Date();
+    if (d.getMonth() > 4 && d.getDate() >= 20)
+        document.getElementById("age").innerHTML = (d.getFullYear() - 2003);
+    else {
+        document.getElementById("age").innerHTML = (d.getFullYear() - 1 - 2003);
+    }
+}
 
 
 function changeTheme(color) {
@@ -61,7 +38,6 @@ function copyContent() {
     alert("Id copy to your clipboard")
 }
 
-updateVisitCount();
 
 function updateVisitCount() {
     fetch('https://api.countapi.xyz/hit/lacroix.gq')
