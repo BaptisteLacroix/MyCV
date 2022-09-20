@@ -1,3 +1,5 @@
+/* source : https://stackoverflow.com/questions/60093545/jquery-animation-scrolling-whole-page */
+
 const SELECTOR = '.hide';
 const ANIMATE_CLASS_NAME = 'active';
 
