@@ -78,6 +78,19 @@ label {
     border-right: solid 1px rgb(0 0 0 / 15%);
 }
 
+.categorie>div {
+    border: solid 1px rgb(0 0 0 / 15%);
+    background: rgb(0 0 0 / 5%);
+}
+
+.categorie>div>div:last-of-type {
+    border-right: solid 0 rgb(0 0 0 / 15%);
+}
+
+.categorie>div>div {
+    border-right: solid 1px rgb(0 0 0 / 15%);
+}
+
 input[type=text], input[type=email] {
     background: rgb(0 0 0 / 5%);
     border: solid 1px rgb(0 0 0 / 15%);
