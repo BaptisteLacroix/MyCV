@@ -1,35 +1,15 @@
-/* source : https://stackoverflow.com/questions/60093545/jquery-animation-scrolling-whole-page */
+const hiddenElements = document.querySelectorAll(".hide");
 
-const SELECTOR = '.hide';
-const ANIMATE_CLASS_NAME = 'active';
+scrollAnim = () => {
+	let windowHt = window.innerHeight;
+	hiddenElements.forEach(elements => {
+		let elementPos = elements.getBoundingClientRect().top;
+		if (elementPos <= windowHt / 0.5 ) {
+			elements.classList.add('active');
+		}
+	});
+}
 
-const animate = element => (
-    element.classList.add(ANIMATE_CLASS_NAME) // On a joute a la classe .hide la classe .active => 'hide active'
-);
+document.addEventListener("DOMContentLoaded", scrollAnim);
 
-const isAnimated = element => (
-    element.classList.contains(ANIMATE_CLASS_NAME)
-);
-
-const intersectionObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-
-        // when element's is in viewport,
-        // animate it!
-        if (entry.intersectionRatio > 0) {
-            animate(entry.target);
-            // remove observer after animation
-            observer.unobserve(entry.target);
-        }
-    });
-});
-
-// get only these elements,
-// which are not animated yet
-const elements = [].filter.call(
-    document.querySelectorAll(SELECTOR),
-    element => !isAnimated(element, ANIMATE_CLASS_NAME)
-);
-
-// start observing your elements
-elements.forEach((element) => intersectionObserver.observe(element));
+window.addEventListener('scroll', scrollAnim);

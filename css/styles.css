@@ -823,6 +823,15 @@ footer {
         margin-left: 0;
     }
 
+    div.notationBar {
+        margin-left: 20px;
+    }
+
+    div.notationBar {
+        height: 10px;
+        width: 8em;
+    }
+
     label {
         max-width: 100%;
         font-weight: bold;
@@ -866,7 +875,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 452px) {
 
     .categorie {
         display: flex;
@@ -887,6 +896,10 @@ footer {
     .categorie>section>section {
         padding: 2em;
         border-right: solid 0 rgba(255, 255, 255, 0.15);
+    }
+
+    div.notationBar {
+        width: 5em;
     }
 }
 
