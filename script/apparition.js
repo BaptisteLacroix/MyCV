@@ -4,7 +4,7 @@ scrollAnim = () => {
 	let windowHt = window.innerHeight;
 	hiddenElements.forEach(elements => {
 		let elementPos = elements.getBoundingClientRect().top;
-		if (elementPos <= windowHt / 0.5 ) {
+		if (elementPos <= windowHt / 0.35) {
 			elements.classList.add('active');
 		}
 	});

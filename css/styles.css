@@ -11,12 +11,6 @@ a:hover {
     color: #f7f5f8;
 }
 
-/*
-.mandatory-scroll-snapping {
-    scroll-snap-align: start;
-}
-*/
-
 .hide {
     opacity: 0;
     transition: 1s;
@@ -336,7 +330,7 @@ div.notationBar:first-of-type {
     }
 
     100% {
-        width: 25%;
+        width: 30%;
     }
 }
 
@@ -356,7 +350,47 @@ div.notationBar:first-of-type {
     }
 
     100% {
-        width: 10%;
+        width: 30%;
+    }
+}
+
+#php {
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
+.progressBar.PHPProgress {
+    animation: loadPHP 5s normal forwards;
+}
+
+@keyframes loadPHP {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+
+#plSQL {
+    width: 100px;
+    height: auto;
+    transition: 1s;
+}
+
+.progressBar.plSQLProgress {
+    animation: loadPLSQL 5s normal forwards;
+}
+
+@keyframes loadPLSQL {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60%;
     }
 }
 
@@ -801,7 +835,7 @@ footer {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 510px) {
 
     .categorie {
         flex-direction: column;
@@ -873,9 +907,17 @@ footer {
         display: flex;
         margin-left: 0;
     }
+
+    .categorie#languages {
+        width: 80%;
+    }
+
+    div.categorie#languages {
+        width: 80%;
+    }
 }
 
-@media screen and (max-width: 452px) {
+@media screen and (max-width: 470px) {
 
     .categorie {
         display: flex;
@@ -900,6 +942,10 @@ footer {
 
     div.notationBar {
         width: 5em;
+    }
+
+    div.categorie#languages {
+        width: 50%;
     }
 }
 
