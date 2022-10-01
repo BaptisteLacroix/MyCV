@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+.fr {
+    display: none;
+}
+
 a:hover {
     color: #f7f5f8;
 }
@@ -41,7 +45,7 @@ a:hover {
     height: auto;
 }
 
-#aboutme {
+.aboutme {
     margin: 20px;
     padding: 20px;
 }
@@ -54,7 +58,7 @@ a:hover {
     height: auto;
 }
 
-#Work {
+.Work {
     padding: 10px;
     margin-left: 1em;
 }
@@ -77,7 +81,7 @@ a:hover {
     margin: 10px;
 }
 
-#infobulle {
+.infobulle {
     display: none;
     position: absolute;
     border-radius: 0.25em;
@@ -119,17 +123,17 @@ a:hover {
 
 /* Catégorie des langages */
 
-.categorie#languages {
+.categorie.languages {
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: 0;
 }
 
-.categorie#languages>div {
+.categorie.languages>div {
     flex-direction: column;
 }
 
-.categorie#languages>div>div {
+.categorie.languages>div>div {
     border: none;
 }
 
@@ -141,62 +145,62 @@ a:hover {
 
 /* Games */
 
-#guitarHero {
+.guitarHero {
     border-radius: 500px;
     width: 200px;
     height: auto;
     transition: 1s;
 }
 
-#labyrinth {
+.labyrinth {
     border-radius: 500px;
     width: 150px;
     height: auto;
     transition: 1s;
 }
 
-#spaceShooter {
+.spaceShooter {
     border-radius: 500px;
     width: 150px;
     height: auto;
     transition: 1s;
 }
 
-#chessGame {
+.chessGame {
     border-radius: 500px;
     width: 150px;
     height: auto;
     transition: 1s;
 }
 
-#guitarHero:hover,
-#labyrinth:hover,
-#spaceShooter:hover,
-#chessGame:hover {
+.guitarHero:hover,
+.labyrinth:hover,
+.spaceShooter:hover,
+.chessGame:hover {
     border-radius: 0;
     transform: scale(1.3);
 }
 
 /* WebSite */
 
-#S105,
-#S106 {
+.S105,
+.S106 {
     border-radius: 500px;
     width: 300px;
     height: auto;
     transition: 1s;
 }
 
-#myCV {
+.myCV {
     border-radius: 500px;
     width: 300px;
     height: auto;
     transition: 1s;
 }
 
-#S105:hover,
-#S106:hover,
-#myCV:hover {
+.S105:hover,
+.S106:hover,
+.myCV:hover {
     border-radius: 0;
     transform: scale(1.2);
 }
@@ -231,7 +235,7 @@ div.notationBar:first-of-type {
     height: 10px;
 }
 
-#python {
+.python {
     width: 100px;
     height: auto;
     transition: 1s;
@@ -252,7 +256,7 @@ div.notationBar:first-of-type {
     }
 }
 
-#java {
+.java {
     width: 100px;
     height: auto;
     transition: 1s;
@@ -273,7 +277,7 @@ div.notationBar:first-of-type {
     }
 }
 
-#lua {
+.lua {
     width: 100px;
     height: auto;
     transition: 1s;
@@ -293,7 +297,7 @@ div.notationBar:first-of-type {
     }
 }
 
-#html-css {
+.html-css {
     width: 150px;
     height: auto;
     transition: 1s;
@@ -313,7 +317,7 @@ div.notationBar:first-of-type {
     }
 }
 
-#C {
+.C {
     width: 90px;
     height: auto;
     transition: 1s;
@@ -334,7 +338,7 @@ div.notationBar:first-of-type {
     }
 }
 
-#javascript {
+.javascript {
     width: 100px;
     height: auto;
     transition: 1s;
@@ -354,7 +358,7 @@ div.notationBar:first-of-type {
     }
 }
 
-#php {
+.php {
     width: 150px;
     height: auto;
     transition: 1s;
@@ -374,7 +378,7 @@ div.notationBar:first-of-type {
     }
 }
 
-#plSQL {
+.plSQL {
     width: 100px;
     height: auto;
     transition: 1s;
@@ -396,31 +400,31 @@ div.notationBar:first-of-type {
 
 /* Operating systems */
 
-#windows {
+.windows {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#ubuntu {
+.ubuntu {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#kalilinux {
+.kalilinux {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#android {
+.android {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#debian {
+.debian {
     width: 100px;
     height: auto;
     transition: 1s;
@@ -428,55 +432,55 @@ div.notationBar:first-of-type {
 
 /* Tools */
 
-#github {
+.github {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#git {
+.git {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#jetbrain {
+.jetbrain {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#vs {
+.vs {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#vscode {
+.vscode {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#sublime-text {
+.sublime-text {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#oracledb {
+.oracledb {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#msoffice {
+.msoffice {
     width: 100px;
     height: auto;
     transition: 1s;
 }
 
-#eclipse {
+.eclipse {
     width: 100px;
     height: auto;
     transition: 1s;
@@ -547,14 +551,14 @@ form>.field2>.field {
     height: auto;
 }
 
-#content {
+.content {
     padding: 30px;
     margin: 10px;
 }
 
 /* Form */
 
-ul#info {
+ul.info {
     padding-left: 50px;
 }
 
@@ -583,19 +587,19 @@ ul.icons li {
     padding: 0 0.75em 0 0;
 }
 
-#logoInsta {
+.logoInsta {
     width: 32px;
     height: 32px;
 }
 
-#logoLinkedin {
+.logoLinkedin {
     width: 32px;
     height: 32px;
     background-color: white;
     border-radius: 10px;
 }
 
-#logoDiscord {
+.logoDiscord {
     width: 32px;
     height: 32px;
     padding-left: 1px;
@@ -610,7 +614,7 @@ ul.icons li {
     display: flex;
 }
 
-#formButton {
+.formButton {
     width: 140px;
     height: 45px;
     font-size: 23px;
@@ -623,7 +627,7 @@ ul.icons li {
     z-index: 1;
 }
 
-#formButton::before {
+.formButton::before {
     content: "";
     position: absolute;
     border-radius: 20px;
@@ -635,11 +639,11 @@ ul.icons li {
     transition: all 0.5s;
 }
 
-#formButton:hover::before {
+.formButton:hover::before {
     width: 100%;
 }
 
-#formButton:active:before {
+.formButton:active:before {
     background: #b9b9b9;
 }
 
@@ -736,18 +740,18 @@ footer {
         padding: 0;
     }
 
-    #borderStyle {
+    .borderStyle {
         flex: 0.5;
         border-left: solid white;
     }
 
-    #infobulle {
+    .infobulle {
         padding: 20px;
         top: -70px;
         bottom: auto;
     }
 
-    .categorie:hover>#infobulle {
+    .categorie:hover>.infobulle {
         display: block;
     }
 }
@@ -761,7 +765,7 @@ footer {
         padding: 0;
     }
 
-    #borderStyle {
+    .borderStyle {
         flex: 0.5;
         margin-top: 30px;
     }
@@ -770,16 +774,32 @@ footer {
         padding-left: 20px;
     }
 
-}
+    .infobulle {
+        padding: 20px;
+        top: -70px;
+        bottom: auto;
+    }
 
-@media screen and (min-width: 805px) {
-
-    section:hover+#infobulle {
+    .categorie:hover>.infobulle {
         display: block;
     }
 
-    #test>p {
+}
+
+@media screen and (min-width: 731px) {
+
+    .test>p {
         display: none;
+    }
+
+    .infobulle {
+        padding: 20px;
+        top: -70px;
+        bottom: auto;
+    }
+
+    .categorie:hover>.infobulle {
+        display: block;
     }
 }
 
@@ -822,15 +842,19 @@ footer {
         border-right: solid 0 rgba(255, 255, 255, 0.15);
     }
 
-    #test {
+    .test {
         display: flex;
     }
 
-    #test>p {
+    .test>p {
         margin-right: auto;
         margin-left: auto;
         background-color: rgba(255, 255, 255, 0.15);
         padding: 20px
+    }
+
+    .categorie:hover>.infobulle {
+        display: none;
     }
 }
 
@@ -879,7 +903,7 @@ footer {
         border-right: none;
     }
 
-    ul#info {
+    ul.info {
         padding: 0;
     }
 
@@ -908,11 +932,11 @@ footer {
         margin-left: 0;
     }
 
-    .categorie#languages {
+    .categorie.languages {
         width: 80%;
     }
 
-    div.categorie#languages {
+    div.categorie.languages {
         width: 80%;
     }
 }
@@ -944,7 +968,7 @@ footer {
         width: 5em;
     }
 
-    div.categorie#languages {
+    div.categorie.languages {
         width: 50%;
     }
 }

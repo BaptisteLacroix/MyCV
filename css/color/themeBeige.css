@@ -6,7 +6,7 @@ a:hover {
     color: maroon;
 }
 
-h2, #printTheme > p {
+h2, .printTheme > p {
     color: maroon;
 }
 
@@ -32,11 +32,11 @@ div.bandeau {
     color: maroon;
 }
 
-#boutonPlus {
+.boutonPlus {
     color: black;
 }
 
-#boutonPlus span{
+.boutonPlus span{
     background-color: burlywood;
 }
 
@@ -49,7 +49,7 @@ body {
     color: black;
 }
 
-#infobulle {
+.infobulle {
     background-color: rgb(0 0 0 / 15%);
 }
 
@@ -101,15 +101,15 @@ textarea {
     border: solid 1px rgb(0 0 0 / 15%);
 }
 
-#formButton {
+.formButton {
     color: black;
 }
 
-#formButton::before {
+.formButton::before {
     background-color: black;
 }
 
-#formButton:hover {
+.formButton:hover {
     color: white;
 }
 
@@ -128,13 +128,13 @@ textarea {
 }
 
 @media screen and (min-width: 1030px) {
-    #borderStyle {
+    .borderStyle {
         border-left: solid black;
     }
 }
 
 @media screen and (max-width: 1029px) {
-    #borderStyle {
+    .borderStyle {
         border-top: solid black;
     }
 }

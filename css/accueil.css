@@ -112,12 +112,12 @@ span:nth-child(5) {
 /* Theme Style */
 
 
-#theme {
+.theme {
     opacity: 0;
     animation: fade-in 3s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-#colorChange {
+.colorChange {
     padding: 0;
     margin-top: 0;
     display: flex;
@@ -125,12 +125,12 @@ span:nth-child(5) {
     justify-content: center;
 }
 
-#printTheme {
+.printTheme {
     display: flex;
     justify-content: center;
 }
 
-#printTheme > p {
+.printTheme > p {
     font-size: 30px;
     font-weight: bold;
     color: orange;
@@ -182,9 +182,46 @@ span:nth-child(5) {
     transform: scale(1.3);
 }
 
+/* Languages Option */
+
+.languageOption {
+    opacity: 0;
+    animation: fade-in 3s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.messageLanguage {
+    font-weight: bold;
+    color: orange;
+    transition: 1s;
+}
+
+.frenchFlag {
+    transition: 1s;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.englishFlag {
+    transition: 1s;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.frenchFlag:hover {
+    transform: scale(1.3);
+}
+
+.englishFlag:hover {
+    transform: scale(1.3);
+}
+
 /* Button animation */
 
-#boutonPlus {
+.boutonPlus {
     position: relative;
     text-decoration: none;
     color: white;
@@ -196,7 +233,7 @@ span:nth-child(5) {
     animation: fade-in 3s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
-#boutonPlus::before {
+.boutonPlus::before {
     z-index: 1;
     display: block;
     position: absolute;
@@ -214,7 +251,7 @@ span:nth-child(5) {
     transition: 1s;
 }
 
-#boutonPlus span {
+.boutonPlus span {
     z-index: -1;
     position: absolute;
     width: 1.5em;
@@ -225,12 +262,12 @@ span:nth-child(5) {
     transition: 1s;
 }
 
-#boutonPlus:hover span {
+.boutonPlus:hover span {
     width: 90%;
 }
 
 
-#boutonPlus:hover::before {
+.boutonPlus:hover::before {
     transform: translateX(0.6em);
 }
 

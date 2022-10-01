@@ -14,7 +14,7 @@ div.bandeau {
     background-color: black;
 }
 
-#boutonPlus {
+.boutonPlus {
     color: white;
 }
 
@@ -23,7 +23,7 @@ body {
     color: white;
 }
 
-#infobulle {
+.infobulle {
     background-color: rgb(0 0 0 / 15%);
 }
 
@@ -62,15 +62,15 @@ textarea {
     border: solid 1px rgb(0 0 0 / 15%);
 }
 
-#formButton {
+.formButton {
     color: white;
 }
 
-#formButton::before {
+.formButton::before {
     background-color: white;
 }
 
-#formButton:hover {
+.formButton:hover {
     color: black;
 }
 
@@ -93,13 +93,13 @@ footer {
 }
 
 @media screen and (min-width: 1030px) {
-    #borderStyle {
+    .borderStyle {
         border-left: solid white;
     }
 }
 
 @media screen and (max-width: 1029px) {
-    #borderStyle {
+    .borderStyle {
         border-top: solid white;
     }
 }

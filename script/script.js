@@ -14,10 +14,14 @@ function setAge() {
     let d = new Date();
     /* Checking if the current date is after May 20th. If it is, it will display the current year - 2003. If it is not, it
     will display the current year - 1 - 2003. */
-    if (d.getMonth() > 4 || (d.getDate() >= 20 && d.getMonth() === 4))
-        document.getElementById("age").innerHTML = (d.getFullYear() - 2003);
-    else {
-        document.getElementById("age").innerHTML = (d.getFullYear() - 1 - 2003);
+    if (d.getMonth() > 4 || (d.getDate() >= 20 && d.getMonth() === 4)) {
+        for (let i = 0; i < document.getElementsByClassName("age").length; i++) {
+            document.getElementsByClassName("age")[i].innerHTML = d.getFullYear() - 2003;
+        }
+    } else {
+        for (let i = 0; i < document.getElementsByClassName("age").length; i++) {
+            document.getElementsByClassName("age")[i].innerHTML = d.getFullYear() - 1 - 2003;
+        }
     }
 }
 
@@ -43,7 +47,9 @@ function changeTheme(color) {
  * @param path - The path to the image you want to display when the mouse is over the image.
  */
 function onHover(id, path) {
-    document.getElementById(id).src = path;
+    for (let i = 0; i < document.getElementsByClassName(id).length; i++) {
+        document.getElementsByClassName(id)[i].src = path;
+    }
 }
 
 /**
@@ -54,7 +60,9 @@ function onHover(id, path) {
  * @param path - The path to the image you want to display when the mouse is not hovering over the image.
  */
 function offHover(id, path) {
-    document.getElementById(id).src = path;
+    for (let i = 0; i < document.getElementsByClassName(id).length; i++) {
+        document.getElementsByClassName(id)[i].src = path;
+    }
 }
 
 /**
@@ -75,4 +83,46 @@ function updateVisitCount() {
         .then(res => {
             countEl.innerHTML = res.value;
         })
+}
+
+function changeLanguage(language) {
+    if (language === "fr") {
+        // met le html lang en fr
+        document.getElementsByTagName("html")[0].setAttribute("lang", "fr");
+        // affiche le texte en français
+        for (let i = 0; i < document.getElementsByClassName("fr").length; i++) {
+            document.getElementsByClassName("fr")[i].style.display = "block";
+        }
+        // cache le texte en anglais
+        for (let i = 0; i < document.getElementsByClassName("en").length; i++) {
+            document.getElementsByClassName("en")[i].style.display = "none";
+        }
+        // change le href du bouton
+        for (let i = 0; i < document.getElementsByClassName("boutonBack").length; i++) {
+            document.getElementsByClassName("boutonBack")[i].href = "./index.html#HomeFr";
+        }
+        // change le href du bouton
+        for (let i = 0; i < document.getElementsByClassName("boutonPlus").length; i++) {
+            document.getElementsByClassName("boutonPlus")[i].href = "./index.html#AboutFr";
+        }
+    } else if (language === "en") {
+        // met le html lang en en
+        document.getElementsByTagName("html")[0].setAttribute("lang", "en");
+        // cache le texte en français
+        for (let i = 0; i < document.getElementsByClassName("fr").length; i++) {
+            document.getElementsByClassName("fr")[i].style.display = "none";
+        }
+        // affiche le texte en anglais
+        for (let i = 0; i < document.getElementsByClassName("en").length; i++) {
+            document.getElementsByClassName("en")[i].style.display = "block";
+        }
+        // change les href des boutons
+        for (let i = 0; i < document.getElementsByClassName("boutonBack").length; i++) {
+            document.getElementsByClassName("boutonBack")[i].href = "./index.html#HomeEn";
+        }
+        // change les href des boutons
+        for (let i = 0; i < document.getElementsByClassName("boutonPlus").length; i++) {
+            document.getElementsByClassName("boutonPlus")[i].href = "./index.html#AboutEn";
+        }
+    }
 }
