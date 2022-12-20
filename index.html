@@ -4,845 +4,466 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Baptiste Lacroix">
-    <link rel="stylesheet" type="text/css" href="./css/accueil.css" />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="css/color/themeDark.css" id="theme_css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/accueil.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/color/themeDark.css" id="theme_css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Lacroix Baptiste</title>
 </head>
 
 
-
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<p style="display: none">This page has <span id="count">0</span> views</p>
 
-    <p style="display: none">This page has <span id="count">0</span> views</p>
-
-    <div class="type1 fullscreen en" id="HomeEn" dir="ltr">
-        <nav>
-            <h1>
-                <span>Welcome</span>
-                <span>to</span>
-                <span>Lacroix</span>
-                <span>Baptiste</span>
-                <span>Portfolio</span>
-            </h1>
-            <div class="theme">
-                <div class="printTheme">
-                    <p>Choose your theme</p>
-                </div>
-                <ul class="colorChange">
-                    <li>
-                        <button class="dot dot1" onclick="changeTheme('dark')"></button>
-                    </li>
-                    <li>
-                        <button class="dot dot2" onclick="changeTheme('blue')"></button>
-                    </li>
-                    <li>
-                        <button class="dot dot3" onclick="changeTheme('beige')"></button>
-                    </li>
-                    <li>
-                        <button class="dot dot4" onclick="changeTheme('purple')"></button>
-                    </li>
-                </ul>
+<div class="type1 fullscreen" id="HomeEn" dir="ltr">
+    <nav>
+        <h1>
+            <span id="welcomeSpan">Welcome</span>
+            <span id="toSpan">to</span>
+            <span id="lacroixSpan">Lacroix</span>
+            <span id="baptisteSpan">Baptiste</span>
+            <span id="portoflioSpan">Portfolio</span>
+        </h1>
+        <div class="theme">
+            <div class="printTheme">
+                <p id="theme">Choose your theme</p>
             </div>
-                <div class="languageOption messageLanguage">
-                    <p>Choose your language</p>
-                </div>
-                <div class="languageOption">
-                    <img class="frenchFlag" src="./img/languageOption/drapeauFrancais.png" alt="Drapeau français" height="274" width="273" onclick="changeLanguage('fr')">
-                    <img class="englishFlag" src="./img/languageOption/drapeauAnglais.png" alt="Drapeau Anglais" height="271" width="270" onclick="changeLanguage('en')">
-                </div>
-            <a class="boutonPlus" href="./index.html#AboutEn">
-                <span></span>
-                Discover Me &nbsp;
-            </a>
-        </nav>
-    </div>
-    <div class="type1 fullscreen fr" id="HomeFr" dir="ltr">
-        <nav>
-            <h1>
-                <span>Bienvenue</span>
-                <span>dans le</span>
-                <span>Portfolio de</span>
-                <span>Lacroix</span>
-                <span>Baptiste</span>
-            </h1>
-            <div class="theme">
-                <div class="printTheme">
-                    <p>Choisissez votre thème</p>
-                </div>
-                <ul class="colorChange">
-                    <li>
-                        <button class="dot dot1" onclick="changeTheme('dark')"></button>
-                    </li>
-                    <li>
-                        <button class="dot dot2" onclick="changeTheme('blue')"></button>
-                    </li>
-                    <li>
-                        <button class="dot dot3" onclick="changeTheme('beige')"></button>
-                    </li>
-                    <li>
-                        <button class="dot dot4" onclick="changeTheme('purple')"></button>
-                    </li>
-                </ul>
-            </div>
-            <div class="languageOption messageLanguage">
-                <p>Choisissez votre langue</p>
-            </div>
-            <div class="languageOption">
-                <img class="frenchFlag" src="./img/languageOption/drapeauFrancais.png" alt="Drapeau français" height="274" width="273" onclick="changeLanguage('fr')">
-                <img class="englishFlag" src="./img/languageOption/drapeauAnglais.png" alt="Drapeau Anglais" height="271" width="270" onclick="changeLanguage('en')">
-            </div>
-            <a class="boutonPlus" href="./index.html#AboutFr">
-                <span></span>
-                Découvrez moi &nbsp;
-            </a>
-        </nav>
-    </div>
-
-    <div class="type2 fullscreen en" dir="ltr">
-        <div class="aboutme">
-            <h2 id="AboutEn" class="hide">About Me</h2>
-            <p class="hide">
-                <b>Hi there 👋</b>
-            </p>
-            <p class="hide">
-                💬 My name is <b>Baptiste</b>, I'm <b class="age"></b>, Im Franco-Canadian and I live in <b>France</b>.<br>
-                I started programming around 2019 with <b>Python</b> and now I work on some personal and school
-                projects.<br>
-            </p>
-            <p class="hide">
-                🌱 I enjoy learning everything related to <b>computer science</b> more specifically in
-                <b>development</b>
-                and <b>cybersecurity</b><br>
-                In my spare time, I learn to use different tools and programming languages but I also like to do sports
-                mainly mountain biking to clear my head. <br>
-            </p>
-            <p class="hide">
-                🎒 I completed my general baccalaureate with the specialties NSI, Math, Physics Chemistry at the
-                <a href="https://www.atrium-sud.fr/web/lgt-auguste-renoir-068021" target="_blank"><b><i>Auguste
-                            Renoir</i></b></a> high school in
-                <a
+            <ul class="colorChange">
+                <li>
+                    <button class="dot dot1" onclick="changeTheme('dark')"></button>
+                </li>
+                <li>
+                    <button class="dot dot2" onclick="changeTheme('blue')"></button>
+                </li>
+                <li>
+                    <button class="dot dot3" onclick="changeTheme('beige')"></button>
+                </li>
+                <li>
+                    <button class="dot dot4" onclick="changeTheme('purple')"></button>
+                </li>
+            </ul>
+        </div>
+        <div class="languageOption messageLanguage">
+            <p id="language">Choose your language</p>
+        </div>
+        <div class="languageOption">
+            <img id="french" class="frenchFlag" src="./img/languageOption/drapeauFrancais.png" alt="Drapeau français"
+                 height="274"
+                 width="273">
+            <img id="english" class="englishFlag" src="./img/languageOption/drapeauAnglais.png" alt="Drapeau Anglais"
+                 height="271"
+                 width="270">
+        </div>
+        <a id="discoverMe" class="boutonPlus" href="./index.html#AboutEn">
+            <span></span>
+            Discover Me &nbsp;
+        </a>
+    </nav>
+</div>
+<div class="type2 fullscreen" dir="ltr">
+    <div class="aboutme">
+        <h2 id="aboutEn" class="hide">About Me</h2>
+        <p class="hide">
+            <b id="hiThere">Hi there 👋</b>
+        </p>
+        <p id="presentation" class="hide">
+            💬 My name is <b>Baptiste</b>, I'm <b class="age"></b>, Im Franco-Canadian and I live in <b>France</b>.<br>
+            I started programming around 2019 with <b>Python</b> and now I work on some personal and school
+            projects.<br>
+        </p>
+        <p id="skills" class="hide">
+            🌱 I enjoy learning everything related to <b>computer science</b> more specifically in
+            <b>development</b>
+            and <b>cybersecurity</b><br>
+            In my spare time, I learn to use different tools and programming languages but I also like to do sports
+            mainly mountain biking to clear my head. <br>
+        </p>
+        <p id="school" class="hide">
+            🎒 I completed my general baccalaureate with the specialties NSI, Math, Physics Chemistry at the
+            <a href="https://www.atrium-sud.fr/web/lgt-auguste-renoir-068021" target="_blank"><b><i>Auguste
+                Renoir</i></b></a> high school in
+            <a
                     href="https://www.google.com/maps/place/Cagnes-sur-Mer/@43.6712421,7.1501541,13z/data=!3m1!4b1!4m5!3m4!1s0x12cdd3a2d11dc9c9:0x5c4349fc32c96606!8m2!3d43.663739!4d7.14882">
-                    <b><i>Cagnes sur mer</i></b></a><br>
-            </p>
-            <p class="hide">
-                🎓 I'm currently studying at <a href="https://iut.univ-cotedazur.fr/" target="_blank"><b><i>IUT Nice
-                            Côte d'Azur</i></b></a> in computer science.
-                I hope in the future to join an engineer school and also become a <b>computer engineer</b>.<br>
-                I completed my first year at the BUT informatique in Nice by finishing 5th in my year group.
-            </p>
-            <p class="hide">
-                🔎 I am currently looking for an internship in software development for a period of 2 months (2 May -
-                30 June)
-            </p>
-        </div>
+                <b><i>Cagnes sur mer</i></b></a><br>
+        </p>
+        <p id="sup" class="hide">
+            🎓 I'm currently studying at <a href="https://iut.univ-cotedazur.fr/" target="_blank"><b><i>IUT Nice
+            Côte d'Azur</i></b></a> in computer science.
+            I hope in the future to join an engineer school and also become a <b>computer engineer</b>.<br>
+            I completed my first year at the BUT informatique in Nice by finishing 5th in my year group.
+        </p>
+        <p id="internship" class="hide">
+            🔎 I am currently looking for an internship in software development for a period of minimum 2 months (17
+            april -
+            16 june 2023)
+        </p>
     </div>
-    <div class="type2 fullscreen fr" dir="ltr">
-        <div id="AboutFr" class="aboutme">
-            <h2 class="hide">A propos de moi</h2>
-            <p class="hide">
-                <b>Salut 👋</b>
-            </p>
-            <p class="hide">
-                💬 Je m'appelle <b>Baptiste</b>, j'ai <b class="age"></b> ans, je suis Franco-Canadien et je vis en <b>France</b>.<br>
-                J'ai commencé à programmer vers 2019 avec <b>Python</b> et maintenant je travaille sur des projets
-                personnels et scolaires.<br>
-            </p>
-            <p class="hide">
-                🌱 J'aime apprendre tout ce qui touche à <b>l'informatique</b> plus particulièrement dans le
-                <b>développement </b>
-                et la <b>cybersécurité </b><br>
-                Dans mes temps libres, j'apprends à utiliser différents outils et langages de programmation mais
-                j'aime aussi faire du sport principalement du VTT pour me vider la tête.<br>
-            </p>
-            <p class="hide">
-                🎒 J'ai complété mon baccalauréat général avec les spécialités NSI, Math, Physique Chimie au lycée
-                <a href="https://www.atrium-sud.fr/web/lgt-auguste-renoir-068021" target="_blank"><b><i>Auguste
-                    Renoir</i></b></a> à
-                <a
-                        href="https://www.google.com/maps/place/Cagnes-sur-Mer/@43.6712421,7.1501541,13z/data=!3m1!4b1!4m5!3m4!1s0x12cdd3a2d11dc9c9:0x5c4349fc32c96606!8m2!3d43.663739!4d7.14882">
-                    <b><i>Cagnes sur mer</i></b></a><br>
-            </p>
-            <p class="hide">
-                🎓 J'étudie actuellement à l'<a href="https://iut.univ-cotedazur.fr/" target="_blank"><b><i>IUT Nice
-                Côte d'Azur</i></b></a> en informatique.
-                J'espère à l'avenir rejoindre une école d'ingénieurs et devenir <b>ingénieur en informatique</b>.<br>
-                J'ai complété ma première année au BUT informatique à Nice en terminant 5ème de ma promotion.
-            </p>
-            <p class="hide">
-                🔎 Je suis actuellement à la recherche d'un stage en développement logiciel pour une période de 2 mois
-                (2 mai - 30 juin)
-            </p>
+</div>
+<div class="type3 fullscreen" dir="ltr">
+    <div class="inner">
+        <h2 id="myWorks" class="Work hide">What I have Done ?</h2>
+        <div class="test">
+            <p id="gif">Click on the images to launch the gifs</p>
         </div>
-    </div>
-
-    <div class="type3 fullscreen en" dir="ltr">
-        <div class="inner">
-            <h2 class="Work hide">What I have Done ?</h2>
-            <div class="test">
-                <p>Click on the images to launch the gifs</p>
-            </div>
-            <div class="box">
-                <div>
-                    <h3 class="hide"> Some games </h3>
-                    <div class="categorie cat1 hide">
+        <div class="box">
+            <div>
+                <h3 id="games" class="hide"> Some games </h3>
+                <div class="categorie cat1 hide">
+                    <div>
                         <div>
-                            <div>
-                                <a href="https://github.com/BaptisteLacroix/Labyrinthe" target="_blank">
-                                <img class="labyrinth" src="img/games/labyrinth/labyrinth.jpg" alt="Labyrinth" width="547"
-                                    height="738"
-                                    onmouseover="onHover('labyrinth', '../img/games/labyrinth/labyrinth.gif');"
-                                    onmouseout="offHover('labyrinth', '../img/games/labyrinth/labyrinth.jpg');">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://github.com/BaptisteLacroix/SpaceShooter" target="_blank">
-                                <img class="spaceShooter" src="img/games/spaceShooter/spaceShooter.jpg" alt="Space Shooter"
-                                    width="643" height="865"
-                                    onmouseover="onHover('spaceShooter', '../img/games/spaceShooter/spaceShooter.gif');"
-                                    onmouseout="offHover('spaceShooter', '../img/games/spaceShooter/spaceShooter.jpg');">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://github.com/BaptisteLacroix/Guitar-Hero" target="_blank">
-                                <img class="guitarHero" src="img/games/guitarHero/guitarHero.jpg" alt="Guitar Hero"
-                                    width="1920" height="1080"
-                                    onmouseover="onHover('guitarHero', '../img/games/guitarHero/guitarHero.gif');"
-                                    onmouseout="offHover('guitarHero', '../img/games/guitarHero/guitarHero.jpg');">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://github.com/BaptisteLacroix/chess-game" target="_blank">
-                                <img class="chessGame" src="img/games/chessGame/chessGame.jpg" alt="Chess Game" width="585"
-                                    height="594"
-                                    onmouseover="onHover('chessGame', '../img/games/chessGame/chessGame.jpg');"
-                                    onmouseout="offHover('chessGame', '../img/games/chessGame/chessGame.jpg');">
-                                </a>
-                            </div>
-                        </div>
-                        <span class="infobulle">Hover over the images to launch the gifs</span>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="hide"> Some WebSites </h3>
-                    <div class="categorie hide">
-                        <div>
-                            <div>
-                                <a href="https://baptistelacroix.github.io/SAE106">
-                                    <img class="S106" src="./img/webSite/s106/s106.jpg" alt="S106" width="1287"
-                                        height="725" onmouseover="onHover('S106', '../img/webSite/s106/s106.gif');"
-                                        onmouseout="offHover('S106', '../img/webSite/s106/s106.jpg');">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://baptistelacroix.github.io/SAE105">
-                                    <img class="S105" src="./img/webSite/s105/s105.jpg" alt="S105" width="1920"
-                                        height="1080" onmouseover="onHover('S105', '../img/webSite/s105/s105.gif');"
-                                        onmouseout="offHover('S105', '../img/webSite/s105/s105.jpg');">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://lacroix.gq">
-                                    <img class="myCV" src="img/webSite/myCV.png" alt="My CV"
-                                        width="1264" height="882">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="hide"> All Languages I have learned or im currently learning</h3>
-                    <div class="categorie hide languages">
-                        <div>
-                            <div class="containNotationBar">
-                                <abbr title="Python">
-                                    <a>
-                                        <img class="python" src="img/languages/python.png" alt="Python" width="1024"
-                                            height="1024">
-                                    </a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar pythonProgress hide">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="Java">
-                                    <a><img class="java" src="img/languages/java.png" alt="Java" width="481"
-                                            height="597"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar javaProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="HTML CSS">
-                                    <a><img class="html-css" src="img/languages/html-css.png" alt="HTML/CSS" width="2000"
-                                            height="1295"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar html-cssProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="PHP">
-                                    <a><img class="php" src="img/languages/php.png" alt="PHP" width="2812"
-                                            height="1563"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar PHPProgress">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="containNotationBar hide">
-                                <abbr title="JavaScript">
-                                    <a><img class="javascript" src="img/languages/javascript.png" alt="Javascript"
-                                            width="128" height="128"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar jsProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="C">
-                                    <a><img class="C" src="img/languages/C.png" alt="C" width="267" height="300"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar cProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="Lua">
-                                    <a><img class="lua" src="img/languages/lua.png" alt="Lua" width="600" height="600"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar luaProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="plSQL">
-                                    <a><img class="plSQL" src="img/languages/plSQL.png" alt="plSQL" width="300"
-                                            height="300"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar plSQLProgress">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="hide"> All Operating systems I used or im using</h3>
-                    <div class="categorie hide">
-                        <div>
-                            <div>
-                                <abbr title="Windows">
-                                    <a><img class="windows" src="img/systems/windows.svg" alt="windows"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Ubuntu">
-                                    <a><img class="ubuntu" src="img/systems/ubuntu.svg" alt="ubuntu"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Kali Linux">
-                                    <a><img class="kalilinux" src="img/systems/kali.svg" alt="kali linux"></a>
-                                </abbr>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <abbr title="Android">
-                                    <a><img class="android" src="img/systems/android.svg" alt="android"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Debian">
-                                    <a><img class="debian" src="img/systems/debian.svg" alt="debian"></a>
-                                </abbr>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="hide"> All Tools I used or im using</h3>
-                    <div class="categorie hide">
-                        <div>
-                            <div>
-                                <abbr title="github">
-                                    <a><img class="github" src="img/tools/github.svg" alt="github"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="git">
-                                    <a><img class="git" src="img/tools/git.svg" alt="git"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="JetBrain">
-                                    <a><img class="jetbrain" src="img/tools/idea.svg" alt="JetBrain"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Eclipse">
-                                    <a><img class="eclipse" src="img/tools/eclipse.svg" alt="Eclipse"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Visual Studio">
-                                    <a><img class="vs" src="img/tools/vs.svg" alt="Visual Studio"></a>
-                                </abbr>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <abbr title="Visual Studio Code">
-                                    <a><img class="vscode" src="img/tools/vscode.svg" alt="Visual Studio Code"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Sublime Texte">
-                                    <a><img class="sublime-text" src="img/tools/sublime-text.svg" alt="Sublime Texte"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Oracle BD">
-                                    <a><img class="oracledb" src="img/tools/oracledb.svg" alt="Oracle BD"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Microsoft Office">
-                                    <a><img class="msoffice" src="img/tools/msoffice.svg" alt="Microsoft Office"></a>
-                                </abbr>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="type4 fullscreen" dir="ltr">
-            <div class="inner">
-                <div id="content">
-                    <h2 id="Contact" class="hide">Contact Me</h2>
-                    <p class="hide">If you are interested in my work, or want to know more about me and my work. <br>You
-                        can fill out this form, so that I can contact you again</p>
-                </div>
-                <div class="split">
-                    <ul>
-                        <li>
-                            <form action="https://formsubmit.co/baptiste.lacroix03@gmail.com" method="post">
-                                <div class="fields hide">
-                                    <div class="field half">
-                                        <label for="nameEN"> Name </label>
-                                        <input id="nameEN" name="name" type="text" required>
-                                    </div>
-                                    <div class="field half">
-                                        <label for="emailEN"> Email </label>
-                                        <input id="emailEN" name="email" type="email" required>
-                                    </div>
-                                    <div class="field">
-                                        <label for="messageEN"> Message </label>
-                                        <textarea id="messageEN" name="message" rows="5" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="field2">
-                                    <button class="formButton" type="submit">Send</button>
-                                </div>
-                            </form>
-                        </li>
-                        <li class="borderStyle">
-                            <ul class="info hide">
-                                <li>
-                                    <h3>Email</h3>
-                                    <a href="mailto:baptiste.lacroix@etu.unice.fr">baptiste.lacroix@etu.unice.fr</a>
-                                </li>
-                                <li>
-                                    <h3>Social</h3>
-                                    <ul class="icons">
-                                        <li>
-                                            <a href="https://github.com/BaptisteLacroix" target="_blank"
-                                                class="icon logo">
-                                                <img src="./img/logo/GitHub-Mark-Light-32px.png" alt="Logo Github"
-                                                    width="32" height="32">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="icon logo">
-                                                <abbr title="Click to copy my id to your clipboard">
-                                                    <img class="logoDiscord" src="./img/logo/discord.png"
-                                                        alt="Logo Discord" width="512" height="512"
-                                                        onclick="copyContent()">
-                                                </abbr>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.linkedin.com/in/baptiste-lacroix-02515a244/"
-                                                target="_blank" class="icon logo">
-                                                <img class="logoLinkedin" src="./img/logo/linkedin.png" alt="Logo Linkedin"
-                                                    width="4096" height="4096">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="badge-base LI-profile-badge" data-locale="fr_FR"
-                                                data-size="medium" data-theme="dark" data-type="VERTICAL"
-                                                data-vanity="lacroix-baptiste" data-version="v1"><a
-                                                    class="badge-base__link LI-simple-link"
-                                                    href="https://www.linkedin.com/in/lacroix-baptiste/"></a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="type3 fullscreen fr" dir="ltr">
-        <div class="inner">
-            <h2 class="Work hide">Qu'est-ce que j'ai fait ?</h2>
-            <div class="test">
-                <p>Cliquez sur les images pour lancer les gifs</p>
-            </div>
-            <div class="box">
-                <div>
-                    <h3 class="hide"> Quelques jeux </h3>
-                    <div class="categorie cat1 hide">
-                        <div>
-                            <div>
-                                <img class="labyrinth" src="img/games/labyrinth/labyrinth.jpg" alt="Labyrinth" width="547"
+                            <a href="https://github.com/BaptisteLacroix/Labyrinthe" target="_blank">
+                                <img class="labyrinth" src="img/games/labyrinth/labyrinth.jpg" alt="Labyrinth"
+                                     width="547"
                                      height="738"
                                      onmouseover="onHover('labyrinth', '../img/games/labyrinth/labyrinth.gif');"
                                      onmouseout="offHover('labyrinth', '../img/games/labyrinth/labyrinth.jpg');">
-                            </div>
-                            <div>
-                                <img class="spaceShooter" src="img/games/spaceShooter/spaceShooter.jpg" alt="Space Shooter"
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/BaptisteLacroix/SpaceShooter" target="_blank">
+                                <img class="spaceShooter" src="img/games/spaceShooter/spaceShooter.jpg"
+                                     alt="Space Shooter"
                                      width="643" height="865"
                                      onmouseover="onHover('spaceShooter', '../img/games/spaceShooter/spaceShooter.gif');"
                                      onmouseout="offHover('spaceShooter', '../img/games/spaceShooter/spaceShooter.jpg');">
-                            </div>
-                            <div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/BaptisteLacroix/Guitar-Hero" target="_blank">
                                 <img class="guitarHero" src="img/games/guitarHero/guitarHero.jpg" alt="Guitar Hero"
                                      width="1920" height="1080"
                                      onmouseover="onHover('guitarHero', '../img/games/guitarHero/guitarHero.gif');"
                                      onmouseout="offHover('guitarHero', '../img/games/guitarHero/guitarHero.jpg');">
-                            </div>
-                            <div>
-                                <img class="chessGame" src="img/games/chessGame/chessGame.jpg" alt="Chess Game" width="585"
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/BaptisteLacroix/chess-game" target="_blank">
+                                <img class="chessGame" src="img/games/chessGame/chessGame.jpg" alt="Chess Game"
+                                     width="585"
                                      height="594"
                                      onmouseover="onHover('chessGame', '../img/games/chessGame/chessGame.jpg');"
                                      onmouseout="offHover('chessGame', '../img/games/chessGame/chessGame.jpg');">
-                            </div>
+                            </a>
                         </div>
-                        <span class="infobulle"> Survoler les images pour lancer les gifs </span>
+                        <div>
+                            <a href="#" target="_blank">
+                                <img class="killBique" src="img/games/killBique/killBique.jpg" alt="KillBique"
+                                     width="585"
+                                     height="594"
+                                     onmouseover="onHover('killBique', '../img/games/killBique/killBique.jpg');"
+                                     onmouseout="offHover('killBique', '../img/games/killBique/killBique.jpg');">
+                            </a>
+                        </div>
+                    </div>
+                    <span id="infoBulle" class="infobulle">Hover over the images to launch the gifs</span>
+                </div>
+            </div>
+            <div>
+                <h3 id="website" class="hide"> Some WebSites </h3>
+                <div class="categorie hide">
+                    <div>
+                        <div>
+                            <a href="https://baptistelacroix.github.io/SAE106">
+                                <img class="S106" src="./img/webSite/s106/s106.jpg" alt="S106" width="1287"
+                                     height="725" onmouseover="onHover('S106', '../img/webSite/s106/s106.gif');"
+                                     onmouseout="offHover('S106', '../img/webSite/s106/s106.jpg');">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://baptistelacroix.github.io/SAE105">
+                                <img class="S105" src="./img/webSite/s105/s105.jpg" alt="S105" width="1920"
+                                     height="1080" onmouseover="onHover('S105', '../img/webSite/s105/s105.gif');"
+                                     onmouseout="offHover('S105', '../img/webSite/s105/s105.jpg');">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://lacroix.gq">
+                                <img class="myCV" src="img/webSite/myCV.png" alt="My CV"
+                                     width="1264" height="882">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://baptistelacroix.github.io/space-invader-js/">
+                                <img class="space-invader-js" src="img/space-invader-js/space-invader-js.png"
+                                     alt="SPace invader game in JS"
+                                     width="2056" height="1176">
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h3 class="hide"> Quelques sites Web </h3>
-                    <div class="categorie hide">
-                        <div>
-                            <div>
-                                <a href="https://baptistelacroix.github.io/SAE106">
-                                    <img class="S106" src="./img/webSite/s106/s106.jpg" alt="S106" width="1287"
-                                         height="725" onmouseover="onHover('S106', '../img/webSite/s106/s106.gif');"
-                                         onmouseout="offHover('S106', '../img/webSite/s106/s106.jpg');">
+            </div>
+            <div>
+                <h3 id="allLanguages" class="hide"> All Languages I have learned or im currently learning</h3>
+                <div class="categorie hide languages">
+                    <div>
+                        <div class="containNotationBar">
+                            <abbr title="Python">
+                                <a>
+                                    <img class="python" src="img/languages/python.png" alt="Python" width="1024"
+                                         height="1024">
                                 </a>
-                            </div>
-                            <div>
-                                <a href="https://baptistelacroix.github.io/SAE105">
-                                    <img class="S105" src="./img/webSite/s105/s105.jpg" alt="S105" width="1920"
-                                         height="1080" onmouseover="onHover('S105', '../img/webSite/s105/s105.gif');"
-                                         onmouseout="offHover('S105', '../img/webSite/s105/s105.jpg');">
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://lacroix.gq">
-                                    <img class="myCV" src="img/webSite/myCV.png" alt="My CV" width="1264" height="882">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="hide"> Tous les languages que j'ai appris ou que j'apprends actuellement</h3>
-                    <div class="categorie hide languages">
-                        <div>
-                            <div class="containNotationBar">
-                                <abbr title="Python">
-                                    <a>
-                                        <img class="python" src="img/languages/python.png" alt="Python" width="1024"
-                                             height="1024">
-                                    </a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar pythonProgress hide">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="Java">
-                                    <a><img class="java" src="img/languages/java.png" alt="Java" width="481"
-                                            height="597"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar javaProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="HTML CSS">
-                                    <a><img class="html-css" src="img/languages/html-css.png" alt="HTML/CSS" width="2000"
-                                            height="1295"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar html-cssProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="PHP">
-                                    <a><img class="php" src="img/languages/php.png" alt="PHP" width="2812"
-                                            height="1563"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar PHPProgress">
-                                    </div>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar pythonProgress hide">
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="containNotationBar hide">
-                                <abbr title="JavaScript">
-                                    <a><img class="javascript" src="img/languages/javascript.png" alt="Javascript"
-                                            width="128" height="128"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar jsProgress">
-                                    </div>
+                        <div class="containNotationBar hide">
+                            <abbr title="Java">
+                                <a><img class="java" src="img/languages/java.png" alt="Java" width="481"
+                                        height="597"></a>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar javaProgress">
                                 </div>
                             </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="C">
-                                    <a><img class="C" src="img/languages/C.png" alt="C" width="267" height="300"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar cProgress">
-                                    </div>
+                        </div>
+                        <div class="containNotationBar hide">
+                            <abbr title="HTML CSS">
+                                <a><img class="html-css" src="img/languages/html-css.png" alt="HTML/CSS" width="2000"
+                                        height="1295"></a>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar html-cssProgress">
                                 </div>
                             </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="Lua">
-                                    <a><img class="lua" src="img/languages/lua.png" alt="Lua" width="600" height="600"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar luaProgress">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="containNotationBar hide">
-                                <abbr title="plSQL">
-                                    <a><img class="plSQL" src="img/languages/plSQL.png" alt="plSQL" width="300"
-                                            height="300"></a>
-                                </abbr>
-                                <div class="notationBar">
-                                    <div class="progressBar plSQLProgress">
-                                    </div>
+                        </div>
+                        <div class="containNotationBar hide">
+                            <abbr title="PHP">
+                                <a><img class="php" src="img/languages/php.png" alt="PHP" width="2812"
+                                        height="1563"></a>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar PHPProgress">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <h3 class="hide"> Tous les systèmes d'exploitation que j'ai utilisés ou que j'utilise </h3>
-                    <div class="categorie hide">
-                        <div>
-                            <div>
-                                <abbr title="Windows">
-                                    <a><img class="windows" src="img/systems/windows.svg" alt="windows"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Ubuntu">
-                                    <a><img class="ubuntu" src="img/systems/ubuntu.svg" alt="ubuntu"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Kali Linux">
-                                    <a><img class="kalilinux" src="img/systems/kali.svg" alt="kali linux"></a>
-                                </abbr>
+                    <div>
+                        <div class="containNotationBar hide">
+                            <abbr title="JavaScript">
+                                <a><img class="javascript" src="img/languages/javascript.png" alt="Javascript"
+                                        width="128" height="128"></a>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar jsProgress">
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div>
-                                <abbr title="Android">
-                                    <a><img class="android" src="img/systems/android.svg" alt="android"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Debian">
-                                    <a><img class="debian" src="img/systems/debian.svg" alt="debian"></a>
-                                </abbr>
+                        <div class="containNotationBar hide">
+                            <abbr title="C">
+                                <a><img class="C" src="img/languages/C.png" alt="C" width="267" height="300"></a>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar cProgress">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="hide"> Tous les outils que j'ai utilisés ou que j'utilise </h3>
-                    <div class="categorie hide">
-                        <div>
-                            <div>
-                                <abbr title="github">
-                                    <a><img class="github" src="img/tools/github.svg" alt="github"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="git">
-                                    <a><img class="git" src="img/tools/git.svg" alt="git"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="JetBrain">
-                                    <a><img class="jetbrain" src="img/tools/idea.svg" alt="JetBrain"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Eclipse">
-                                    <a><img class="eclipse" src="img/tools/eclipse.svg" alt="Eclipse"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Visual Studio">
-                                    <a><img class="vs" src="img/tools/vs.svg" alt="Visual Studio"></a>
-                                </abbr>
+                        <div class="containNotationBar hide">
+                            <abbr title="Lua">
+                                <a><img class="lua" src="img/languages/lua.png" alt="Lua" width="600" height="600"></a>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar luaProgress">
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div>
-                                <abbr title="Visual Studio Code">
-                                    <a><img class="vscode" src="img/tools/vscode.svg" alt="Visual Studio Code"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Sublime Texte">
-                                    <a><img class="sublime-text" src="img/tools/sublime-text.svg" alt="Sublime Texte"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Oracle BD">
-                                    <a><img class="oracledb" src="img/tools/oracledb.svg" alt="Oracle BD"></a>
-                                </abbr>
-                            </div>
-                            <div>
-                                <abbr title="Microsoft Office">
-                                    <a><img class="msoffice" src="img/tools/msoffice.svg" alt="Microsoft Office"></a>
-                                </abbr>
+                        <div class="containNotationBar hide">
+                            <abbr title="plSQL">
+                                <a><img class="plSQL" src="img/languages/plSQL.png" alt="plSQL" width="300"
+                                        height="300"></a>
+                            </abbr>
+                            <div class="notationBar">
+                                <div class="progressBar plSQLProgress">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="type4 fullscreen" dir="ltr">
-            <div class="inner">
-                <div class="content">
-                    <h2 class="hide">Me contacter</h2>
-                    <p class="hide">Si vous êtes intéressé par mon travail, ou si vous voulez en savoir plus sur moi
-                        et mon travail. Vous pouvez remplir ce formulaire, afin que je puisse vous recontacter</p>
+            <div>
+                <h3 id="OS" class="hide"> All Operating systems I used or im using</h3>
+                <div class="categorie hide">
+                    <div>
+                        <div>
+                            <abbr title="Windows">
+                                <a><img class="windows" src="img/systems/windows.svg" alt="windows"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Ubuntu">
+                                <a><img class="ubuntu" src="img/systems/ubuntu.svg" alt="ubuntu"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Kali Linux">
+                                <a><img class="kalilinux" src="img/systems/kali.svg" alt="kali linux"></a>
+                            </abbr>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <abbr title="Android">
+                                <a><img class="android" src="img/systems/android.svg" alt="android"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Debian">
+                                <a><img class="debian" src="img/systems/debian.svg" alt="debian"></a>
+                            </abbr>
+                        </div>
+                    </div>
                 </div>
-                <div class="split">
-                    <ul>
-                        <li>
-                            <form action="https://formsubmit.co/baptiste.lacroix03@gmail.com" method="post">
-                                <div class="fields hide">
-                                    <div class="field half">
-                                        <label for="nameFR"> Nom </label>
-                                        <input id="nameFR" name="name" type="text" required>
-                                    </div>
-                                    <div class="field half">
-                                        <label for="emailFR"> Email </label>
-                                        <input id="emailFR" name="email" type="email" required>
-                                    </div>
-                                    <div class="field">
-                                        <label for="messageFR"> Message </label>
-                                        <textarea id="messageFR" name="message" rows="5" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="field2">
-                                    <button class="formButton" type="submit">Envoyer</button>
-                                </div>
-                            </form>
-                        </li>
-                        <li class="borderStyle">
-                            <ul class="info hide">
-                                <li>
-                                    <h3>Email</h3>
-                                    <a href="mailto:baptiste.lacroix@etu.unice.fr">baptiste.lacroix@etu.unice.fr</a>
-                                </li>
-                                <li>
-                                    <h3>Social</h3>
-                                    <ul class="icons">
-                                        <li>
-                                            <a href="https://github.com/BaptisteLacroix" target="_blank"
-                                               class="icon logo">
-                                                <img src="./img/logo/GitHub-Mark-Light-32px.png" alt="Logo Github"
-                                                     width="32" height="32">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="icon logo">
-                                                <abbr title="Click to copy my id to your clipboard">
-                                                    <img class="logoDiscord" src="./img/logo/discord.png"
-                                                         alt="Logo Discord" width="512" height="512"
-                                                         onclick="copyContent()">
-                                                </abbr>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.linkedin.com/in/baptiste-lacroix-02515a244/"
-                                               target="_blank" class="icon logo">
-                                                <img class="logoLinkedin" src="./img/logo/linkedin.png" alt="Logo Linkedin"
-                                                     width="4096" height="4096">
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="badge-base LI-profile-badge" data-locale="fr_FR"
-                                                 data-size="medium" data-theme="dark" data-type="VERTICAL"
-                                                 data-vanity="lacroix-baptiste" data-version="v1"><a
-                                                    class="badge-base__link LI-simple-link"
-                                                    href="https://www.linkedin.com/in/lacroix-baptiste/"></a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            </div>
+            <div>
+                <h3 id="tools" class="hide"> All Tools I used or im using</h3>
+                <div class="categorie hide">
+                    <div>
+                        <div>
+                            <abbr title="github">
+                                <a><img class="github" src="img/tools/github.svg" alt="github"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="git">
+                                <a><img class="git" src="img/tools/git.svg" alt="git"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="JetBrain">
+                                <a><img class="jetbrain" src="img/tools/idea.svg" alt="JetBrain"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Eclipse">
+                                <a><img class="eclipse" src="img/tools/eclipse.svg" alt="Eclipse"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Visual Studio">
+                                <a><img class="vs" src="img/tools/vs.svg" alt="Visual Studio"></a>
+                            </abbr>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <abbr title="Visual Studio Code">
+                                <a><img class="vscode" src="img/tools/vscode.svg" alt="Visual Studio Code"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Sublime Texte">
+                                <a><img class="sublime-text" src="img/tools/sublime-text.svg" alt="Sublime Texte"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Oracle BD">
+                                <a><img class="oracledb" src="img/tools/oracledb.svg" alt="Oracle BD"></a>
+                            </abbr>
+                        </div>
+                        <div>
+                            <abbr title="Microsoft Office">
+                                <a><img class="msoffice" src="img/tools/msoffice.svg" alt="Microsoft Office"></a>
+                            </abbr>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="type4 fullscreen" dir="ltr">
+        <div class="inner">
+            <div id="content">
+                <h2 id="Contact" class="hide">Contact Me</h2>
+                <p id="questions" class="hide">If you are interested in my work, or want to know more about me and my
+                    work. <br>You
+                    can fill out this form, so that I can contact you again</p>
+            </div>
+            <div class="split">
+                <ul>
+                    <li>
+                        <form action="https://formsubmit.co/baptiste.lacroix03@gmail.com" method="post">
+                            <div class="fields hide">
+                                <div class="field half">
+                                    <label id="name" for="nameEN"> Name </label>
+                                    <input id="nameEN" name="name" type="text" required>
+                                </div>
+                                <div class="field half">
+                                    <label for="emailEN"> Email </label>
+                                    <input id="emailEN" name="email" type="email" required>
+                                </div>
+                                <div class="field">
+                                    <label for="messageEN"> Message </label>
+                                    <textarea id="messageEN" name="message" rows="5" required></textarea>
+                                </div>
+                            </div>
+                            <div class="field2">
+                                <button id="submit" class="formButton" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="borderStyle">
+                        <ul class="info hide">
+                            <li>
+                                <h3>Email</h3>
+                                <a href="mailto:baptiste.lacroix@etu.unice.fr">baptiste.lacroix@etu.unice.fr</a>
+                            </li>
+                            <li>
+                                <h3 id="socials">Social</h3>
+                                <ul class="icons">
+                                    <li>
+                                        <a href="https://github.com/BaptisteLacroix" target="_blank"
+                                           class="icon logo">
+                                            <img src="./img/logo/GitHub-Mark-Light-32px.png" alt="Logo Github"
+                                                 width="32" height="32">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="icon logo">
+                                            <abbr title="Click to copy my id to your clipboard">
+                                                <img class="logoDiscord" src="./img/logo/discord.png"
+                                                     alt="Logo Discord" width="512" height="512"
+                                                     onclick="copyContent()">
+                                            </abbr>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/baptiste-lacroix-02515a244/"
+                                           target="_blank" class="icon logo">
+                                            <img class="logoLinkedin" src="./img/logo/linkedin.png" alt="Logo Linkedin"
+                                                 width="4096" height="4096">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="badge-base LI-profile-badge" data-locale="fr_FR"
+                                             data-size="medium" data-theme="dark" data-type="VERTICAL"
+                                             data-vanity="lacroix-baptiste" data-version="v1"><a
+                                                class="badge-base__link LI-simple-link"
+                                                href="https://www.linkedin.com/in/lacroix-baptiste/"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <a class="boutonBack" href="./index.html#HomeEn">
-        <span></span>
-    </a>
-    <footer>
-        <p>
-            <a href="mailto:baptiste.lacroix@etu.unice.fr">© - Lacroix Baptiste - 2022</a>
-        </p>
-    </footer>
-    <script src="./script/script.js"></script>
-    <script src="./script/apparition.js"></script>
+<a class="boutonBack" href="./index.html#HomeEn">
+    <span></span>
+</a>
+<footer>
+    <p>
+        <a href="mailto:baptiste.lacroix@etu.unice.fr">© - Lacroix Baptiste - 2022</a>
+    </p>
+</footer>
+<script src="./script/script.js"></script>
+<script src="./script/apparition.js"></script>
+<script src="./script/language.js"></script>
 </body>
 
 </html>

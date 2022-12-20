@@ -1,0 +1,42 @@
+{
+  "welcome": [
+    {
+      "welcomeSpan": "Welcome"
+    },
+    {
+      "toSpan": "to"
+    },
+    {
+      "lacroixSpan": "Lacroix"
+    },
+    {
+      "baptisteSpan": "Baptiste"
+    },
+    {
+      "portoflioSpan": "Portfolio"
+    }
+  ],
+  "theme": "Choose your theme",
+  "language": "Choose your language",
+  "discoverMe": "Discover Me",
+  "aboutEn": "About Me",
+  "hiThere": "Hi there \uD83D\uDC4B",
+  "presentation": "My name is <b>Baptiste</b>, I'm <b class='age'></b>, Im Franco-Canadian and I live in <b>France</b>.<br>I started programming around 2019 with <b>Python</b> and now I work on some personal and school projects.<br>",
+  "skills": "\uD83C\uDF31 I enjoy learning everything related to <b>computer science</b> more specifically in\n                <b>development</b> and <b>cybersecurity</b><br>In my spare time, I learn to use different tools and programming languages but I also like to do sports mainly mountain biking to clear my head. <br>",
+  "school": "                \uD83C\uDF92 I completed my general baccalaureate with the specialties NSI, Math, Physics Chemistry at the\n                <a href=\"https://www.atrium-sud.fr/web/lgt-auguste-renoir-068021\" target=\"_blank\"><b><i>Auguste\n                            Renoir</i></b></a> high school in\n                <a\n                    href=\"https://www.google.com/maps/place/Cagnes-sur-Mer/@43.6712421,7.1501541,13z/data=!3m1!4b1!4m5!3m4!1s0x12cdd3a2d11dc9c9:0x5c4349fc32c96606!8m2!3d43.663739!4d7.14882\">\n                    <b><i>Cagnes sur mer</i></b></a><br>",
+  "sup": "                \uD83C\uDF93 I'm currently studying at <a href=\"https://iut.univ-cotedazur.fr/\" target=\"_blank\"><b><i>IUT Nice\n                            Côte d'Azur</i></b></a> in computer science.\n                I hope in the future to join an engineer school and also become a <b>computer engineer</b>.<br>\n                I completed my first year at the BUT informatique in Nice by finishing 5th in my year group.",
+  "internship": "                \uD83D\uDD0E I am currently looking for an internship in software development for a period of minimum 2 months (17 april -\n                16 june 2023)",
+  "myWorks": "What I have Done ?",
+  "gif": "Click on the images to launch the gifs",
+  "games": "Some games",
+  "infoBulle": "Hover over the images to launch the gifs",
+  "website": "Some websites",
+  "allLanguages": "All Languages I have learned or im currently learning",
+  "OS": "All Operating systems I used or im using",
+  "tools": "All Tools I used or im using",
+  "Contact": "Contact Me",
+  "questions": "If you are interested in my work, or want to know more about me and my work. <br>You\n                    can fill out this form, so that I can contact you again",
+  "name": "Name",
+  "submit": "Send",
+  "socials": "Socials"
+}
