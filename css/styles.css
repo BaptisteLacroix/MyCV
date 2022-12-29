@@ -186,7 +186,8 @@ a:hover {
 .S105,
 .S106,
 .myCV,
-.space-invader-js {
+.space-invader-js,
+.merchant-website{
     border-radius: 500px;
     width: 300px;
     height: auto;
@@ -196,7 +197,8 @@ a:hover {
 .S105:hover,
 .S106:hover,
 .myCV:hover,
-.space-invader-js:hover {
+.space-invader-js:hover,
+.merchant-website:hover{
     border-radius: 0;
     transform: scale(1.2);
 }

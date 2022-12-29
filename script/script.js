@@ -43,12 +43,12 @@ function changeTheme(color) {
 
 /**
  * When the user hovers over the image with the id of 'id', change the image to the image at the path 'path'.
- * @param id - The id of the image you want to change.
+ * @param className - The id of the image you want to change.
  * @param path - The path to the image you want to display when the mouse is over the image.
  */
-function onHover(id, path) {
-    for (let i = 0; i < document.getElementsByClassName(id).length; i++) {
-        document.getElementsByClassName(id)[i].src = path;
+function onHover(className, path) {
+    for (let i = 0; i < document.getElementsByClassName(className).length; i++) {
+        document.getElementsByClassName(className)[i].src = path;
     }
 }
 
@@ -56,13 +56,32 @@ function onHover(id, path) {
  * "When the mouse leaves the image, change the image to the one specified in the path variable."
  *
  * The function is called in the HTML code like this:
- * @param id - The id of the image you want to change.
+ * @param className - The id of the image you want to change.
  * @param path - The path to the image you want to display when the mouse is not hovering over the image.
  */
-function offHover(id, path) {
-    for (let i = 0; i < document.getElementsByClassName(id).length; i++) {
-        document.getElementsByClassName(id)[i].src = path;
+function offHover(className, path) {
+    for (let i = 0; i < document.getElementsByClassName(className).length; i++) {
+        document.getElementsByClassName(className)[i].src = path;
     }
+}
+
+/**
+ * It changes the image every 5 seconds.
+ * @param className - the class name of the image element
+ * @param dir - the directory where the images are located
+ */
+function startpptxForMerchant(className, dir) {
+    let images = ['index.png', 'explore.png', 'product.png', 'cart.png', 'login.png', 'signin.png', 'paypal.png']
+    let img = document.getElementsByClassName(className);
+    // each 5 seconds change the image in order
+    let i = 0;
+    setInterval(function () {
+        img[0].src = dir + images[i];
+        i++;
+        if (i === images.length) {
+            i = 0;
+        }
+    }, 2500);
 }
 
 /**
