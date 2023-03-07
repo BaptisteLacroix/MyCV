@@ -15,7 +15,6 @@ window.addEventListener("load", function () {
 
 function setLanguage(language) {
     $.getJSON('translations/' + language + '.json', function (data) {
-        console.log(data);
         // Loop through the data
         for (let key in data) {
             // Get the element
