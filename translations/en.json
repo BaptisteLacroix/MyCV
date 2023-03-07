@@ -1,21 +1,9 @@
 {
-  "welcome": [
-    {
-      "welcomeSpan": "Welcome"
-    },
-    {
-      "toSpan": "to"
-    },
-    {
-      "lacroixSpan": "Lacroix"
-    },
-    {
-      "baptisteSpan": "Baptiste"
-    },
-    {
-      "portoflioSpan": "Portfolio"
-    }
-  ],
+  "welcomeSpan": "Welcome",
+  "toSpan": "to",
+  "lacroixSpan": "Lacroix",
+  "baptisteSpan": "Baptiste",
+  "portoflioSpan": "Portfolio",
   "theme": "Choose your theme",
   "language": "Choose your language",
   "discoverMe": "Discover Me",
