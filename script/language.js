@@ -19,7 +19,6 @@ function setLanguage(language) {
         for (let key in data) {
             // Get the element
             let element = document.getElementById(key);
-            console.log(element);
             // If the element exists
             if (element) {
                 // Set the text
