@@ -987,8 +987,17 @@ footer {
         flex-direction: column;
     }
 
-    .S105, .S106, .myCV, .space-invader-js {
+    .website {
         width: 200px;
+    }
+
+    form > .fields {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    form > .fiel.half {
+        margin:0;
     }
 }
 
