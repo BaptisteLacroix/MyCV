@@ -470,6 +470,12 @@ div.notationBar:first-of-type {
     transition: 1s;
 }
 
+.docker {
+    width: 150px;
+    height: auto;
+    transition: 1s;
+}
+
 .eclipse {
     width: 100px;
     height: auto;
