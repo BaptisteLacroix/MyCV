@@ -1,11 +1,5 @@
-/* Getting the element with the id of 'count' and storing it in the variable countEl. */
-const countEl = document.getElementById('count');
-
 /* Calling the function setAge() */
 setAge();
-
-/* Calling the function updateVisitCount() */
-updateVisitCount();
 
 /**
  * Define the age of the user (me in this case)
@@ -90,18 +84,6 @@ function startpptxForMerchant(className, dir) {
 function copyContent() {
     navigator.clipboard.writeText("YuanMeng#3647");
     alert("Id copy to your clipboard")
-}
-
-
-/**
- * It fetches the data from the API, then it updates the HTML element with the value of the data
- */
-function updateVisitCount() {
-    fetch('https://api.countapi.xyz/hit/lacroix.gq')
-        .then(res => res.json())
-        .then(res => {
-            countEl.innerHTML = res.value;
-        })
 }
 
 function changeLanguage(language) {
