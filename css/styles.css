@@ -263,7 +263,7 @@ div.notationBar:first-of-type {
     }
 
     100% {
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -344,7 +344,7 @@ div.notationBar:first-of-type {
     }
 
     100% {
-        width: 60%;
+        width: 90%;
     }
 }
 
